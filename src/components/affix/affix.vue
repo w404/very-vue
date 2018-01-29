@@ -30,7 +30,7 @@
 
     return {
       top: elemRect.top - targetRect.top + scrollTop - clientTop,
-      left: elemRect.left + scrollLeft - clientLeft
+      left: elemRect.left - targetRect.left + scrollLeft - clientLeft
     }
   }
 
@@ -45,7 +45,8 @@
         type: Number
       },
       target: {
-        type: Function
+        type: Function,
+        default: () => window
       }
     },
     data () {
