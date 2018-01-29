@@ -10,8 +10,8 @@
   }
 </style>
 <template>
-  <div>
-    <Affix>
+  <div ref="scrollable" class="scrollable-container">
+    <Affix :target="() => this.$refs.scrollable">
       <div class="demo-affix">固定在最顶部</div>
     </Affix>
     <div v-for="(item,index) in arr">{{item}}</div>

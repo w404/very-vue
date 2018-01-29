@@ -42,6 +42,9 @@
   "peerDependencies": {
     "vue": "^2.5.2"
   },
+  "dependencies": {
+    "deepmerge": "^1.5.2"
+  },
   "devDependencies": {
     "autoprefixer-loader": "^2.0.0",
     "babel-cli": "^6.26.0",
