@@ -1,8 +1,10 @@
 import Affix from './components/affix';
+import Icon from './components/icon';
 import locale from './locale/index';
 
 const components = {
-  Affix
+  Affix,
+  Icon
 };
 
 const veryVue = {

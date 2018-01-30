@@ -9,6 +9,7 @@ import VeryVue from '../src/index';
 import locale from '../src/locale/lang/zh-CN';
 
 Vue.use(VueRouter);
+console.log(VeryVue)
 Vue.use(VeryVue, { locale });
 
 // 开启debug模式
@@ -20,6 +21,9 @@ const router = new VueRouter({
   routes: [{
     path: '/affix',
     component: (resolve) => require(['./routers/affix.vue'], resolve)
+  }, {
+    path: '/icon',
+    component: (resolve) => require(['./routers/icon.vue'], resolve)
   }]
 });
 
