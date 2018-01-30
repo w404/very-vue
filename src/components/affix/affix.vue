@@ -12,14 +12,9 @@
   import getScroll from '../../utils/getScroll';
   const prefixCls = 'vvu-affix';
 
-  function getTargetRect (target) {
-    return target !== window ? target.getBoundingClientRect() : { top: 0, left: 0, bottom: 0 };
-  }
-
   function getOffset (element, target) {
     // 元素的大小及其相对于视口的位置
     const elemRect = element.getBoundingClientRect();
-    const targetRect = getTargetRect(target);
 
     const scrollTop = getScroll(target, true);
     const scrollLeft = getScroll(target, false);
@@ -29,8 +24,8 @@
     const clientLeft = docElem.clientLeft || 0;
 
     return {
-      top: elemRect.top - targetRect.top + scrollTop - clientTop,
-      left: elemRect.left - targetRect.left + scrollLeft - clientLeft
+      top: elemRect.top + scrollTop - clientTop,
+      left: elemRect.left + scrollLeft - clientLeft
     }
   }
 
@@ -43,10 +38,6 @@
       },
       offsetBottom: {
         type: Number
-      },
-      target: {
-        type: Function,
-        default: () => window
       }
     },
     data () {
@@ -83,9 +74,8 @@
       handleScroll () {
         const affix = this.affix;
         const scrollTop = getScroll(window, true);
-        const targetNode = this.target();
         const affixNode = this.$el;
-        const elOffset = getOffset(affixNode, targetNode);
+        const elOffset = getOffset(affixNode, window);
         const windowHeight = window.innerHeight;
         const elHeight = this.$el.getElementsByTagName('div')[0].offsetHeight;
 
