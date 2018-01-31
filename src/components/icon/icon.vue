@@ -1,5 +1,4 @@
 <style lang="less">
-  @import url('./iconfont/ionicons.less');
 </style>
 
 <template>

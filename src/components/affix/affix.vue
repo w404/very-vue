@@ -1,13 +1,5 @@
-<style lang="less">
-@import url('../../styles/variables.less');
-/**
-* Component:		  Affix
-* Description:		将页面元素钉在可视范围。
-*/
-.@{ns}affix {
-  position: fixed;
-  z-index: @zindex-affix;
-}
+<style>
+
 </style>
 
 <template>
