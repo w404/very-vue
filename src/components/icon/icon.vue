@@ -1,9 +1,13 @@
+<style lang="less">
+  @import url('./iconfont/ionicons.less');
+</style>
+
 <template>
   <i :class="classes" :style="styles"></i>
 </template>
 
 <script>
-// iView 的图标使用开源项目 ionicons：http://ionicons.com/
+// very-vue 的图标使用开源项目 ionicons：http://ionicons.com/
 const prefixCls = 'vvu-icon';
 
 export default {
