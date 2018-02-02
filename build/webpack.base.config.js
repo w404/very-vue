@@ -9,6 +9,8 @@ function resolve (dir) {
   return path.join(__dirname, '..', dir);
 }
 
+process.noDeprecation = true;
+
 module.exports = {
   // 加载器
   module: {
@@ -51,8 +53,19 @@ module.exports = {
         'sass-loader?sourceMap'
       ]
     }, { 
-      test: /\.(gif|jpg|png|woff|svg|eot|ttf)\??.*$/, 
-      loader: 'url-loader?limit=8192'
+      test: /\.(ico|png|jpe?g|gif)\??.*$/, 
+      loader: 'url-loader',
+      options: {
+        limit: 10000,
+        name: path.posix.join('static/img/[name].[hash:8].[ext]')
+      }
+    }, {
+      test: /\.(woff2?|eot|svg|ttf|otf)(\?.*)?$/,
+      loader: 'url-loader',
+      options: {
+        limit: 10000,
+        name: path.posix.join('static/fonts/[name].[hash:8].[ext]')
+      }
     }, { 
       test: /\.(html|tpl)$/, 
       loader: 'html-loader' 
@@ -68,7 +81,7 @@ module.exports = {
   plugins: [
     new webpack.optimize.ModuleConcatenationPlugin(),
     new webpack.DefinePlugin({
-        'process.env.VERSION': `'${package.version}'`
+      'process.env.VERSION': `'${package.version}'`
     }),
   ]
 }

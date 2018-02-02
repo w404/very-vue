@@ -1,4 +1,3 @@
-import './styles/index.less';
 import Affix from './components/affix';
 import Icon from './components/icon';
 import locale from './locale/index';

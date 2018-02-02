@@ -9,7 +9,6 @@ import VeryVue from '../src/index';
 import locale from '../src/locale/lang/zh-CN';
 
 Vue.use(VueRouter);
-console.log(VeryVue)
 Vue.use(VeryVue, { locale });
 
 // 开启debug模式

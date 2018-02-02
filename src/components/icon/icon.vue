@@ -1,6 +1,3 @@
-<style lang="less">
-</style>
-
 <template>
   <i :class="classes" :style="styles"></i>
 </template>

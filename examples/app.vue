@@ -1,5 +1,5 @@
 <style lang="less">
-    @import "../src/styles/index.less";
+  @import "../src/components/styles/index.less";
 </style>
 <style scoped>
 nav { margin-bottom: 40px; }

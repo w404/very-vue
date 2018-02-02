@@ -1,7 +1,3 @@
-<style>
-
-</style>
-
 <template>
   <div>
     <div ref="point" :class="classes" :style="styles">

@@ -9,17 +9,11 @@
 </style>
 
 <template>
-  <div ref="scrollBar" class="scrollBar">
+  <div>
     <Affix>
       <div class="demo-affix">固定在最顶部</div>
     </Affix>
-    <Affix :offset-top="200">
-      <div class="demo-affix">固定在距离顶部 200px 的位置</div>
-    </Affix>
     <div v-for="(item,index) in arr" :key="index">{{item}}</div>
-    <Affix :offset-bottom="50">
-      <div class="demo-affix">固定在距离底部 50px 的位置</div>
-    </Affix>
   </div>
 </template>
 <script>
