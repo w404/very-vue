@@ -1,8 +1,0 @@
-/**
-* Component:		  Affix
-* Description:		将页面元素钉在可视范围。
-*/
-.vvu-affix {
-  position: fixed;
-  z-index: 10;
-}
