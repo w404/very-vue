@@ -18,7 +18,7 @@ import VueRouter from 'vue-router';
 import App from 'components/app.vue';
 import Routers from './router.js';
 import VeryVue from 'very-vue'; // 全局引入 very-vue 核心库
-import 'very-vue/dist/very-vue.css'; // 全局引入需要导入样式
+import 'very-vue/dist/very-vue.css'; // 全局引入需要单独导入样式
 
 Vue.use(VueRouter);
 Vue.use(VeryVue);
@@ -39,7 +39,7 @@ new Vue({
 
 ## 按需加载
 
-借助插件[babel-plugin-import](https://github.com/ant-design/babel-plugin-import)可以实现按需加载组件，减少文件体积。首先安装：
+借助插件[babel-plugin-import](https://github.com/ant-design/babel-plugin-import)可以实现按需加载组件，以便减少文件体积。首先安装babel-plugin-import：
 
 ```bash
 npm install babel-plugin-import --save-dev
