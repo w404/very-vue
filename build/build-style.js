@@ -29,7 +29,7 @@ gulp.task('compileCss', function () {
 
 // 拷贝字体文件
 gulp.task('fonts', function () {
-  gulp.src('../src/styles/iconfont/fonts/*.*')
+  gulp.src('../src/components/styles/iconfont/fonts/*.*')
     .pipe(gulp.dest('../dist/fonts'));
 });
 
