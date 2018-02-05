@@ -65,6 +65,6 @@ import { Affix } from 'very-vue';
 上面的方式等同于下面手动引入的方式：
 
 ```js
-import DatePicker from 'very-vue/src/components/affix';  // 加载 JS
-import 'very-vue/src/components/affix/style';         // 加载 LESS
+import Affix from 'very-vue/src/components/affix';  // 加载 JS
+import 'very-vue/src/components/affix/style';        // 加载 LESS
 ```
